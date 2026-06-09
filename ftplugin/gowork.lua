@@ -1,0 +1,1 @@
+-- Mark go.work buffers as a known local filetype for health checks and plugins.

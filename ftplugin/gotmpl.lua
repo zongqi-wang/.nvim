@@ -1,0 +1,1 @@
+-- Mark Go template buffers as a known local filetype for health checks and plugins.

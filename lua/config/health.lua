@@ -21,13 +21,17 @@ end
 
 local check_external_reqs = function()
   -- Basic utils: `git`, `make`, `unzip`
-  for _, exe in ipairs { 'git', 'make', 'unzip', 'rg' } do
+  for _, exe in ipairs { 'git', 'make', 'unzip', 'rg', 'fd', 'fzf', 'node', 'npm', 'go', 'cargo' } do
     local is_executable = vim.fn.executable(exe) == 1
     if is_executable then
       vim.health.ok(string.format("Found executable: '%s'", exe))
     else
       vim.health.warn(string.format("Could not find executable: '%s'", exe))
     end
+  end
+
+  if vim.fn.executable 'zig' == 0 then
+    vim.health.warn "Could not find executable: 'zig' (needed for zig fmt/build/test outside LSP)"
   end
 
   return true

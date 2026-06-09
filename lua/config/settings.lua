@@ -2,7 +2,16 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true 
+vim.g.have_nerd_font = true
+
+vim.filetype.add {
+  filename = {
+    ['go.work'] = 'gowork',
+  },
+  extension = {
+    tmpl = 'gotmpl',
+  },
+}
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -11,6 +20,7 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.opt.number = true
+vim.opt.termguicolors = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
@@ -29,7 +39,6 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
-
 -- Indentation settings
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -39,10 +48,12 @@ vim.opt.smartindent = true
 
 -- Enable break indent
 vim.opt.breakindent = true
+vim.opt.wrap = false
 
 -- Save undo history
 vim.opt.undofile = true
-
+vim.opt.swapfile = false
+vim.opt.backup = false
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -50,6 +61,7 @@ vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
+vim.opt.pumheight = 12
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -60,6 +72,7 @@ vim.opt.timeoutlen = 300
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.splitkeep = 'screen'
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -77,10 +90,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Always shows the sign colum for git-signs etc.
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 
 -- Show a vertical line at column 80
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)

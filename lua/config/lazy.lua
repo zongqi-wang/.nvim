@@ -28,9 +28,9 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
-    { import = "plugins" },
-    { import = "plugins.UI" },
-    { import = "plugins.Editor" },
+  { import = 'plugins' },
+  { import = 'plugins.UI' },
+  { import = 'plugins.Editor' },
   -- NOTE: Plugins can specify dependencies.
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 

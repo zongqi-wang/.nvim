@@ -1,12 +1,11 @@
 -- nvim settings
-require("config.settings")
+require 'config.settings'
 
 -- keymaps
-require("config.keymaps")
+require 'config.keymaps'
 
 -- health check
-require("config.health")
+require 'config.health'
 
 -- lazy
-require("config.lazy")
-
+require 'config.lazy'
