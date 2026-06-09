@@ -121,6 +121,12 @@ return {
           },
         },
       },
+      ruby_lsp = {
+        root_markers = { 'Gemfile', '.ruby-version', '.ruby-lsp' },
+        init_options = {
+          formatter = 'auto',
+        },
+      },
       rust_analyzer = {
         settings = {
           ['rust-analyzer'] = {
@@ -174,6 +180,7 @@ return {
       'gofumpt',
       'goimports',
       'prettier',
+      'rubocop',
       'stylua',
     })
 

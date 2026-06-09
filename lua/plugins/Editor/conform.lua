@@ -40,6 +40,7 @@ return {
       jsonc = { 'prettier', stop_after_first = true },
       lua = { 'stylua' },
       markdown = { 'prettier', stop_after_first = true },
+      ruby = { 'rubocop' },
       rust = { 'rustfmt' },
       typescript = { 'prettier', stop_after_first = true },
       typescriptreact = { 'prettier', stop_after_first = true },

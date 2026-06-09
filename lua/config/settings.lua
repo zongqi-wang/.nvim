@@ -13,6 +13,16 @@ vim.filetype.add {
   },
 }
 
+for _, path in ipairs {
+  '/opt/homebrew/opt/ruby/bin',
+  '/opt/homebrew/lib/ruby/gems/4.0.0/bin',
+  '/usr/local/opt/ruby/bin',
+} do
+  if vim.fn.isdirectory(path) == 1 then
+    vim.env.PATH = path .. ':' .. vim.env.PATH
+  end
+end
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!

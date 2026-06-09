@@ -22,6 +22,7 @@ return {
         'markdown',
         'markdown_inline',
         'query',
+        'ruby',
         'rust',
         'toml',
         'tsx',

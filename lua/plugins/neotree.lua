@@ -7,6 +7,7 @@ return {
     'MunifTanjim/nui.nvim',
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+  event = 'VimEnter',
   cmd = 'Neotree',
   keys = {
     { '<leader>ee', '<cmd>Neotree toggle filesystem reveal=false<cr>', desc = 'Toggle explorer' },
@@ -40,4 +41,15 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    require('neo-tree').setup(opts)
+
+    vim.schedule(function()
+      if #vim.api.nvim_list_uis() == 0 then
+        return
+      end
+
+      vim.cmd 'Neotree show filesystem reveal=true'
+    end)
+  end,
 }
