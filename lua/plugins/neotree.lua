@@ -33,11 +33,32 @@ return {
         },
       },
       use_libuv_file_watcher = true,
+      window = {
+        mappings = {
+          o = 'none',
+        },
+      },
     },
     window = {
       width = 32,
       mappings = {
         ['<space>'] = 'none',
+        s = 'none',
+        v = 'open_vsplit',
+      },
+    },
+    buffers = {
+      window = {
+        mappings = {
+          o = 'none',
+        },
+      },
+    },
+    git_status = {
+      window = {
+        mappings = {
+          o = 'none',
+        },
       },
     },
   },

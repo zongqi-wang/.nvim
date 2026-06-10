@@ -3,6 +3,24 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight' })
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Ex mode' })
 
+for _, mode in ipairs { 'n', 'x', 'o' } do
+  pcall(vim.keymap.del, mode, 'gc')
+end
+pcall(vim.keymap.del, 'n', 'gcc')
+
+vim.keymap.set('n', '<leader>/', function()
+  return require('vim._comment').operator() .. '_'
+end, { expr = true, desc = 'Toggle comment line' })
+vim.keymap.set('x', '<leader>/', function()
+  return require('vim._comment').operator()
+end, { expr = true, desc = 'Toggle comment selection' })
+vim.keymap.set('n', 'g/', function()
+  return require('vim._comment').operator()
+end, { expr = true, desc = 'Toggle comment' })
+vim.keymap.set('o', 'g/', function()
+  require('vim._comment').textobject()
+end, { desc = 'Comment textobject' })
+
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus left' })

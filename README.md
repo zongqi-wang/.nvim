@@ -118,6 +118,7 @@ Explorer:
 - `<leader>ef` reveal current file
 - `<leader>eg` Neo-tree git status
 - `<leader>eb` Neo-tree buffers
+- In Neo-tree, `v` opens the selected file in a vertical split
 
 Buffers, shown as tabs in the top bufferline:
 
@@ -148,11 +149,22 @@ Terminal:
 Navigation and code:
 
 - `<C-h/j/k/l>` move between windows
+- `<leader>/` toggle comment line or visual selection
+- `g/` comment operator
 - `[d` / `]d` previous/next diagnostic
 - `<leader>cd` line diagnostics
 - `<leader>cq` diagnostics quickfix
 - `<leader>j` Flash jump
 - `<leader>J` Flash Treesitter jump
+
+Surround:
+
+- `ys` add surrounding
+- `ds` delete surrounding
+- `cs` replace surrounding
+- `gsf` find surrounding to the right
+- `gsF` find surrounding to the left
+- `gsh` highlight surrounding
 
 Harpoon:
 
