@@ -3,6 +3,7 @@
 Personal Neovim config for macOS, built on `lazy.nvim` with LSP, Treesitter,
 Blink completion, Neo-tree, fzf-lua, Harpoon, ToggleTerm, Catppuccin, and
 language support for Zig, Rust, Go, TypeScript, Lua, and Ruby.
+Blink uses Neovim's built-in `vim.snippet` engine for LSP snippets.
 
 ## Install
 
