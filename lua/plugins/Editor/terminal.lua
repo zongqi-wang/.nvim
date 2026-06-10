@@ -3,6 +3,12 @@ return {
   version = '*',
   keys = {
     {
+      '<C-,>',
+      '<cmd>1ToggleTerm direction=horizontal size=15<cr>',
+      mode = { 'n', 't' },
+      desc = 'Toggle bottom terminal',
+    },
+    {
       '<leader>tt',
       '<cmd>1ToggleTerm direction=horizontal size=15<cr>',
       mode = { 'n', 't' },

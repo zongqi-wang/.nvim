@@ -4,6 +4,13 @@ return {
   cmd = 'FzfLua',
   keys = {
     {
+      '<leader><leader>',
+      function()
+        require('fzf-lua').files()
+      end,
+      desc = 'Find files',
+    },
+    {
       '<leader>ff',
       function()
         require('fzf-lua').files()
@@ -16,6 +23,13 @@ return {
         require('fzf-lua').live_grep()
       end,
       desc = 'Live grep',
+    },
+    {
+      '<leader>sg',
+      function()
+        require('fzf-lua').live_grep()
+      end,
+      desc = 'Search workspace',
     },
     {
       '<leader>fb',

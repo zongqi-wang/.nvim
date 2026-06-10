@@ -45,6 +45,8 @@ return {
       { '<leader>g', group = 'Git', mode = { 'n', 'v' } },
       { '<leader>h', group = 'Harpoon' },
       { '<leader>q', group = 'Quickfix' },
+      { '<leader>s', group = 'Search' },
+      { '<leader><Tab>', group = 'Tabs' },
       { '<leader>t', group = 'Terminal' },
       { '<leader>w', group = 'Workspace' },
     },
